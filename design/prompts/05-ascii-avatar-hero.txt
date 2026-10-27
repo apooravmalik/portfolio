@@ -1,0 +1,44 @@
+INITIAL PROMPT
+Use case: ui-mockup.
+Create one polished portfolio design CONCEPT CANVAS, landscape 1536 by 1024 proportions. This is an approval storyboard, not a real website screenshot. Beautiful, crisp typography and credible ASCII text artwork. Match the existing Apoorav Malik portfolio brand: warm near-white #faf9f6 canvas, charcoal #292a26 Manrope-like sans serif typography, single orange #e56b3c accent. Quiet, editorial, friendly developer personality. No gradients, glass, glows, decorative pill labels, interface cards, arbitrary code windows, fake stats, photography, or childish mascot illustration.
+
+LAYOUT:
+Top 72% shows one generous desktop hero mockup, with small plain page-navigation "am." on left, "Work   About   Playground   Let’s talk" right. Below nav, left roughly 58% contains large highly legible charcoal headline in TWO lines, EXACT text:
+"I turn ideas"
+"into things."
+Integrate a SMALL ASCII person avatar immediately after the word "ideas", inline at the end of that first line, as a playful punctuation mark. Avatar should be only about 70-85 pixels wide in the hero, NOT dominant, NOT full-body. A cute adult developer head made entirely from real monospace ASCII glyphs: short wavy hair, eyebrows, two eyes, nose and small mouth, minimal shoulders. Use ordinary ASCII glyphs such as apostrophes, slashes, parentheses, underscores, dashes and letters; no smooth vector outlines or pixel blocks. A small lightbulb ABOVE HIS HEAD also made from ASCII characters, in orange, with tiny orange ASCII rays. Everything must read as text characters with clear glyph texture rather than normal illustration. Avatar head charcoal, illuminated bulb orange. Deliberately informal, clever, slightly handmade, not a robot.
+Right roughly 42% retains a LARGE 3D torus/donut rendered from thousands of tiny orange alphabet letters with a visible central hole and shading from letter density, against plain near-white. This donut is the main graphic. Do not replace the donut with the avatar.
+Under the headline, body copy EXACT:
+"I’m Apoorav, a full-stack developer."
+"Web apps, data tools, and experiments with AI."
+Then one flat charcoal rectangular action button "Explore my work" and a plain secondary text link "GitHub". Generous spacing and aligned edges. No large avatar occupying the right side.
+
+Bottom 28% of canvas: separated by generous space, a neat three-state INTERACTION STORYBOARD with a larger detail of the SAME ASCII avatar in each state, in three open unboxed columns. Clearly title the strip "A little personality, on purpose." The three column labels EXACT:
+"Idle"
+"Hover / focus"
+"Tap / Enter"
+Idle: neutral curious face and outlined dim charcoal ASCII bulb.
+Hover / focus: eyes glance toward a small pointer cursor, bulb outline turns orange, facial head shape remains same.
+Tap / Enter: small smiling ASCII face and bright solid-orange character bulb with 3 short ASCII rays. No glow. Under each state one short annotation:
+"Quiet, curious."
+"Looks your way."
+"A small idea lights up."
+Small footer caption "Concept only — awaiting approval". Typography should be visibly differentiated: proper clean sans for real page copy, real monospaced text characters for avatar and donut. Avoid fake illegible gibberish in actual headline/body. Show a production-worthy composition and interaction states, NOT a technical specification sheet. Render the actual requested design, no perspective on the entire canvas, no device frame, no extra colour.
+
+REFINEMENT
+Refine this portfolio concept canvas. Preserve the entire page layout, headline, all copy, all positions, orange donut, cream/charcoal/orange palette, and interaction storyboard. Change ONLY the four little avatar+bulb drawings (one in hero, three in storyboard): they must be REAL ASCII TEXT ART, not cartoons with a texture of letters. Every contour, eye, smile, shoulder and bulb must consist of visible Courier monospaced keyboard characters sitting on a strict letter grid. No smooth drawn contour, no filled solid bulb, no illustrated cartoon strokes. The shape must read as a 13-line preformatted text block with spaces between glyphs. Use this specific kind of glyph drawing:
+        \ | /
+         .-.
+        (   )
+         \_/
+         |=|
+         '-'
+       .~~~~~.
+      /       \
+     |  o   o  |
+     |    >    |
+      \  \_/  /
+       '-----'
+       /|   |\
+
+The idea bulb has ASCII slash/pipe rays above the ASCII head, and is a short distance above the hair. Head characters charcoal. Bulb characters orange, except dim charcoal idle state. At idle use neutral simple mouth; hover/focus pupils shift right; tap/Enter smiling with orange rays. The hero avatar is kept small. This is authentic text art, not a hand drawn face, not a pixel sprite, not symbols warped into facial curves. Bulb form only orange letters/punctuation on the plain paper background, never solid orange fill. Do not change anything else.

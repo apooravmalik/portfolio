@@ -1,0 +1,234 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  align-items: center;
+  column-gap: 32px;
+  padding-top: clamp(56px, 6vw, 88px);
+}
+
+.copy { min-width: 0; }
+
+.title {
+  margin: 0;
+  font-size: clamp(56px, 5.6vw, 80px);
+  font-weight: 650;
+  line-height: 1.06;
+  letter-spacing: -0.065em;
+  white-space: normal;
+}
+
+.title > span { display: block; }
+.ideaLetter { position: relative; display: inline-block; }
+
+.bulbMessage {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 2;
+  width: max-content;
+  max-width: min(224px, calc(100vw - 32px));
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+  white-space: normal;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 4px);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
+  pointer-events: none;
+}
+
+.bulbMessage::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: var(--fg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.bulbMessage[data-visible="true"],
+.ideaButton:focus-visible + .bulbMessage {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (hover: hover) {
+  .ideaLetter:hover .bulbMessage { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+}
+
+.ideaButton {
+  position: absolute;
+  top: 0.14em;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: max(44px, 0.7em);
+  height: max(44px, 0.7em);
+  padding: 0;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  touch-action: manipulation;
+}
+
+.bulbIcon {
+  display: flex;
+  width: 0.25em;
+  height: 0.32em;
+  transform-origin: center bottom;
+  pointer-events: none;
+}
+
+.bulbIcon svg { width: 100%; height: 100%; stroke-width: 2.3; }
+.ideaButton:focus-visible { outline-offset: 0; border-radius: 4px; }
+.ideaButton:focus-visible .bulbIcon { color: var(--accent); }
+
+@media (hover: hover) {
+  .ideaButton:hover .bulbIcon { color: var(--accent); }
+}
+
+.ideaButton[data-burst="true"] .bulbIcon { animation: bulb-burst 760ms ease both; color: var(--accent); }
+
+.burst { position: absolute; inset: 0; color: var(--accent); pointer-events: none; }
+.burst::before {
+  content: "";
+  position: absolute;
+  inset: 28%;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  animation: burst-ring 600ms ease-out both;
+}
+.burst i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.09em;
+  height: 0.035em;
+  background: currentColor;
+  animation: burst-spark 650ms ease-out both;
+}
+
+@keyframes bulb-burst {
+  0% { transform: scale(1); opacity: 1; }
+  12% { transform: scale(1.4); opacity: 1; }
+  24%, 65% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes burst-ring {
+  from { transform: scale(0.5); opacity: 0.8; }
+  to { transform: scale(4); opacity: 0; }
+}
+@keyframes burst-spark {
+  from { transform: translate(-50%, -50%) rotate(var(--angle)); opacity: 1; }
+  to { transform: translate(var(--dx), var(--dy)) rotate(var(--angle)) scale(0.2); opacity: 0; }
+}
+
+.description {
+  max-width: 420px;
+  margin: 32px 0 28px;
+  color: var(--fg);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.actions { display: flex; align-items: center; gap: 24px; }
+.actions a { font-size: 13px; }
+.actions a:first-child { background: var(--fg); color: var(--bg); border-radius: 0; box-shadow: none; }
+.actions a:first-child:hover { background: var(--accent-hover); color: #fff; }
+
+.donut {
+  container-type: inline-size;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  color: var(--accent);
+}
+
+.ascii {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.08cqw;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0;
+  white-space: pre;
+  user-select: none;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.motionButton {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  background: transparent;
+  color: var(--fg);
+  transition: color 160ms ease;
+}
+
+.motionButton:hover { color: var(--accent-hover); }
+
+.footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 54px;
+  padding-block: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.scrollLink { display: inline-flex; align-items: center; gap: 10px; transition: color 160ms ease; }
+.scrollLink:hover { color: var(--accent-hover); }
+
+@media (max-width: 1050px) {
+  .title { font-size: clamp(48px, 6.1vw, 64px); }
+  .hero { column-gap: 16px; }
+}
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-top: 60px; }
+  .title { font-size: clamp(46px, 10vw, 72px); }
+  .description { margin-top: 24px; }
+  .donut { width: min(100%, 460px); justify-self: center; margin-top: 24px; }
+  .footer { margin-top: 24px; }
+}
+
+@media (max-width: 559px) {
+  .hero { padding-top: 52px; }
+  .description { font-size: 15px; }
+  .actions { gap: 20px; }
+  .actions a { font-size: 12px; }
+  .footer { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motionButton { display: none; }
+  .scrollLink { transition: none; }
+  .ideaButton[data-burst="true"] .bulbIcon { animation: none; }
+  .burst { display: none; }
+  .bulbMessage { transition: none; }
+}
